@@ -5,7 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 import { CounterContextProvider } from './context/CounterContext';
-
+import { TitleColorContextProvider } from './context/TitleColorContext';
 
 
 
@@ -14,7 +14,9 @@ root.render(
   <React.StrictMode>
     {/*criando provider*/}
     <CounterContextProvider>
-        <App />
+        <TitleColorContextProvider>
+          <App />
+        </TitleColorContextProvider>
     </CounterContextProvider>
   </React.StrictMode>
 );
